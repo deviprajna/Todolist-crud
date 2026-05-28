@@ -7,9 +7,9 @@ const TaskList = new mongoose.Schema(
         },
         description:{
             type: String,
-            required: true,
+            default: '',
         },
-        status: {
+        isCompleted: {
             type: Boolean,
             default: false,
         },
@@ -19,5 +19,5 @@ const TaskList = new mongoose.Schema(
     }
 );
 
-const Task = mongoose.model('ToDoList', TaskList);
+const ToDoList = mongoose.model('ToDoList', TaskList);
 module.exports = ToDoList;
